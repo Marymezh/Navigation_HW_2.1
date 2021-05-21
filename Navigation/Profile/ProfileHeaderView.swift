@@ -61,4 +61,5 @@ class ProfileHeaderView: UIView {
         @objc func buttonIsPressed() {
             statusLabel.text = statusText
         }
+
 }
