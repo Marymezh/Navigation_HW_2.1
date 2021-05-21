@@ -31,10 +31,11 @@ class ProfileViewController: UIViewController {
             newButton.layer.shadowOffset = CGSize(width: 4, height: 4)
             newButton.layer.shadowOpacity = 0.7
             newButton.translatesAutoresizingMaskIntoConstraints = false
-            newButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-            newButton.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: +16).isActive = true
-            newButton.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -16).isActive = true
-            newButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -30).isActive = true
+            NSLayoutConstraint.activate([newButton.heightAnchor.constraint(equalToConstant: 50),
+                                     newButton.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: +16),
+                                     newButton.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+                                     newButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -30)])
+            
     }
     
     override func viewWillLayoutSubviews() {
